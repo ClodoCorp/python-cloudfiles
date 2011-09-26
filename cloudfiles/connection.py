@@ -13,7 +13,7 @@ import  os
 from    urllib    import urlencode
 from    httplib   import HTTPSConnection, HTTPConnection, HTTPException
 from    container import Container, ContainerResults
-from    utils     import unicode_quote, parse_url, THTTPConnection, THTTPSConnection
+from    utils     import unicode_quote, parse_url, THTTPConnection, THTTPSConnection, QHTTPConnection, QHTTPSConnection
 from    errors    import ResponseError, NoSuchContainer, ContainerNotEmpty, \
                          InvalidContainerName, CDNNotEnabled, ContainerExists
 from    Queue     import Queue, Empty, Full
@@ -97,8 +97,8 @@ class Connection(object):
             self.conn_class = self.connection_args[3] and THTTPSConnection or \
                                                               THTTPConnection
         else:
-            self.conn_class = self.connection_args[3] and HTTPSConnection or \
-                                                              HTTPConnection
+            self.conn_class = self.connection_args[3] and QHTTPSConnection or \
+                                                              QHTTPConnection
         self.http_connect()
         if self.cdn_url:
             self.cdn_connect()

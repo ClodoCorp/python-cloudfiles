@@ -66,6 +66,9 @@ def unicode_quote(s):
 
 
 class THTTPConnection(HTTPConnection):
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
+
     def __init__(self, host, port, timeout):
         HTTPConnection.__init__(self, host, port)
         self.timeout = timeout
@@ -77,12 +80,17 @@ class THTTPConnection(HTTPConnection):
 
 class THTTP(HTTP):
     _connection_class = THTTPConnection
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
 
     def set_timeout(self, timeout):
         self._conn.timeout = timeout
 
 
 class THTTPSConnection(HTTPSConnection):
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
+
     def __init__(self, host, port, timeout):
         HTTPSConnection.__init__(self, host, port)
         self.timeout = timeout
@@ -94,6 +102,31 @@ class THTTPSConnection(HTTPSConnection):
 
 class THTTPS(HTTP):
     _connection_class = THTTPSConnection
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
 
     def set_timeout(self, timeout):
         self._conn.timeout = timeout
+
+
+
+
+
+class QHTTPConnection(HTTPConnection):
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
+
+
+class QHTTP(HTTP):
+    _connection_class = QHTTPConnection
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
+
+class QHTTPSConnection(HTTPSConnection):
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
+
+class QHTTPS(HTTP):
+    _connection_class = QHTTPSConnection
+    _http_vsn = 10
+    _http_vsn_str = 'HTTP/1.0'
