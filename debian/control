@@ -1,0 +1,24 @@
+Source: python-cloudfiles
+Section: python
+Priority: optional
+Maintainer: Michael Shuler <michael@pbandjelly.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7.0.50~), python-support (>= 0.90)
+Standards-Version: 3.8.4
+XS-Python-Version: >= 2.4
+Homepage: http://www.rackspacecloud.com/
+Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-cloudfiles/trunk
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-cloudfiles/trunk/
+
+Package: python-cloudfiles
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Provides: ${python:Provides}
+Description: Rackspace Cloud Files service Python interface
+ Cloud Files provides unlimited online storage and CDN file delivery. It
+ is accessed via a web services API, which requires a paid account with
+ Rackspace.
+ .
+ This package provides a client-side Python module for the Cloud Files
+ REST API, supporting container and file object operations as well as
+ CDN management.

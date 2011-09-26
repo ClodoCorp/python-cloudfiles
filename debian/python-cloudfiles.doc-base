@@ -1,0 +1,9 @@
+Document: python-cloudfiles
+Title: Cloud Files Python API Reference
+Author: Rackspace US, Inc.
+Abstract: Cloud Files Python API documentation generated from the code
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-cloudfiles/html/index.html
+Files: /usr/share/doc/python-cloudfiles/html/*.html

@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+# move documentation to html dir for clarity
+override_dh_installdocs:
+	dh_installdocs
+	mv debian/python-cloudfiles/usr/share/doc/python-cloudfiles/docs \
+		debian/python-cloudfiles/usr/share/doc/python-cloudfiles/html
+
+# don't compress examples and documentation files
+override_dh_compress:
+	dh_compress -X.py -X.js -Xapi-objects.txt

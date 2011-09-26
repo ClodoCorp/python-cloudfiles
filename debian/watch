@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.*\/(.*)/python-cloudfiles-$1.tar.gz/ \
+http://github.com/rackspace/python-cloudfiles/downloads .*/tarball/([\d\.]*)

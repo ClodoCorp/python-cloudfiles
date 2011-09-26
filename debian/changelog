@@ -1,0 +1,12 @@
+python-cloudfiles (1.7.9-1) stable; urgency=low
+
+  * New upstream release
+  * Rebuild for Squeeze
+
+ -- Stanislav Bogatyrev <realloc@realloc.spb.ru>  Sun, 25 Sep 2011 16:10:15 +0400
+
+python-cloudfiles (1.7.2-1) unstable; urgency=low
+
+  * Initial Debian release of python-cloudfiles (Closes: #543118)
+
+ -- Michael Shuler <michael@pbandjelly.org>  Fri, 02 Apr 2010 18:49:39 -0500
