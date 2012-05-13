@@ -4,7 +4,8 @@ __version__ = "1.7.9.3"
 user_agent = "python-cloudfiles/%s" % __version__
 us_authurl = 'https://auth.api.rackspacecloud.com/v1.0'
 uk_authurl = 'https://lon.auth.api.rackspacecloud.com/v1.0'
-default_authurl = us_authurl
+clodo_authurl = 'https://api.clodo.ru/'
+default_authurl = clodo_authurl
 default_cdn_ttl = 86400
 cdn_log_retention = False
 
